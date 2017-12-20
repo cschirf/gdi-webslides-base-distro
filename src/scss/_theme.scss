@@ -1,0 +1,380 @@
+// @import url('https://fonts.googleapis.com/css?family=Quattrocento:400,700');
+// @import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400i,700,700i');
+// @import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700');
+
+$primary-color: #f05b62;
+$primary-color-light: #f9b8bb;
+$contrast-color: #01a9b4;
+$success-color: #008000;
+$warning-color: #ffcc00;
+
+$background-color: #2d3e50;
+$default-font-color: #eee;
+$font-color-darker: #d3d3d3;
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+
+body {
+  color: $default-font-color;
+  background-color: $background-color;
+  font-family: 'Source Serif Pro', Helvetica, serif, sans-serif;
+  font-size: 2em;
+  line-height: 1;
+}
+
+::selection {
+  color: #fff;
+  background: $primary-color-light;
+  text-shadow: none;
+}
+
+
+/*********************************************
+ * MISC STYLES
+ *********************************************/
+
+h4,
+h5,
+h6 {
+  text-transform: none;
+}
+
+th {
+  text-shadow: none;
+  text-transform: uppercase;
+}
+
+.intro-slide-image {
+  max-width: 40%;
+  max-height: 40%;
+  border: none;
+  box-shadow: none;
+  background: none;
+}
+
+.fit {
+  max-height: 60vh;
+  max-width: 60vw;
+}
+
+.code {
+  font-family: monospace;
+  font-size: 12pt;
+}
+
+.pic {
+  background-color: #eee;
+  border: none;
+  max-height: 300px;
+}
+
+.pic.small {
+  max-height: 200px;
+}
+
+.pic--high-contrast {
+  background: #fff;
+  border: none;
+  box-shadow: none;
+  height: 300px;
+}
+
+.pic--no-bg {
+  background: none;
+  border: none;
+  box-shadow: none;
+  height: 300px;
+}
+
+.compress {
+  font-size: 16pt;
+  line-height: 140%;
+  letter-spacing: 0.1px;
+}
+
+.compress--mild {
+  font-size: 22pt;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+.compress--extreme {
+  font-size: 14pt;
+  line-height: 120%;
+  letter-spacing: 0.1px;
+}
+
+pre {
+  font-size: 11pt;
+}
+
+pre.compress {
+  font-size: 8pt;
+}
+
+li,
+ul {
+  font-weight: normal;
+}
+
+li.checked {
+  list-style-type: none;
+}
+
+li.checked:before {
+  content: '✓ ';
+  color: $success-color;
+}
+
+li.questionable {
+  list-style-type: none;
+}
+
+li.questionable:before {
+  content: '? ';
+  color: $warning-color;
+}
+
+li.starred {
+  list-style-type: none;
+}
+
+li.starred:before {
+  content: '* ';
+}
+
+.keyword {
+  font-weight: bold;
+}
+
+.keyword.defined:after {
+  content: ': ';
+}
+
+.centered,
+.do-it,
+.question-mark {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-text,
+.key-concept {
+  text-align: center;
+}
+
+.key-concept {
+  font-size: 36pt;
+  height: 50vh;
+  line-height: 120%;
+  letter-spacing: 0.1px;
+}
+
+.do-it {
+  font-size: 150%;
+  height: 70vh;
+}
+
+em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.column-container {
+  display: flex;
+}
+
+.column-container .item {
+  flex-direction: row;
+}
+
+.column-container .pic.large {
+  max-height: 350px;
+}
+
+.column-container .pic.small {
+  max-height: 200px;
+}
+
+.column-container .pic--compress {
+  background-color: #eee;
+  border: none;
+  max-width: 23%;
+  max-height: 23%;
+  margin-top: 5px;
+}
+
+.column-container .pic.linked {
+  border: 0;
+  box-shadow: 0;
+}
+
+.column-container pre {
+  max-width: 49%;
+}
+
+.column-container pre code {
+  height: 100vh;
+}
+
+p {
+  text-align: left;
+}
+
+.definition-table {
+  text-align: left;
+}
+
+.definition-table .row {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.definition-table .col1 {
+  min-width: 25%;
+  max-width: 25%;
+  width: 25%;
+  word-wrap: break-word;
+}
+
+.question-mark {
+  margin-top: 30vh;
+  color: $contrast-color;
+  font-size: 1000%;
+}
+
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+
+.do-it,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin: 0 0 20px;
+  color: $primary-color;
+  font-weight: bold;
+  line-height: 0.9em;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.do-it,
+.h1 {
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+
+/*********************************************
+ * LINKS
+ *********************************************/
+
+a:not(.image) {
+  color: $primary-color-light;
+  text-decoration: none;
+  -webkit-transition: color 0.15s ease;
+  -moz-transition: color 0.15s ease;
+  -ms-transition: color 0.15s ease;
+  -o-transition: color 0.15s ease;
+  transition: color 0.15s ease;
+}
+
+a:not(.image):hover {
+  color: $primary-color-light;
+  text-shadow: none;
+  border: none;
+}
+
+.roll span:after {
+  color: #fff;
+  background: $contrast-color;
+}
+
+a img {
+  margin: 15px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 4px solid #eee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+a:hover img {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: $contrast-color;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+
+.controls div.left,
+.controls div.left.enabled {
+  border-right-color: $contrast-color;
+}
+
+.controls div.right,
+.controls div.right.enabled {
+  border-left-color: $contrast-color;
+}
+
+.controls div.up,
+.controls div.up.enabled {
+  border-bottom-color: $contrast-color;
+}
+
+.controls div.down,
+.controls div.down.enabled {
+  border-top-color: $contrast-color;
+}
+
+.controls div.left.enabled:hover {
+  border-right-color: $primary-color-light;
+}
+
+.controls div.right.enabled:hover {
+  border-left-color: $primary-color-light;
+}
+
+.controls div.up.enabled:hover {
+  border-bottom-color: $primary-color-light;
+}
+
+.controls div.down.enabled:hover {
+  border-top-color: $primary-color-light;
+}
+
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+
+.progress {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.progress span {
+  background: $contrast-color;
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -o-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+}
